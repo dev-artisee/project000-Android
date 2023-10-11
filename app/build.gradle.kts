@@ -1,18 +1,24 @@
+import com.dev.artisee.Libraries
+import com.dev.artisee.Versions
+import com.dev.artisee.Configuration
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-android")
+    id("com.google.devtools.ksp")
 }
 
 android {
-    namespace = "com.dev.artisee"
-    compileSdk = 33
+    namespace = Configuration.applicationId
+    compileSdk = Configuration.compileSdk
 
     defaultConfig {
-        applicationId = "com.dev.artisee"
-        minSdk = 24
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = Configuration.applicationId
+        minSdk = Configuration.minSdk
+        targetSdk = Configuration.targetSdk
+        versionCode = Configuration.versionCode
+        versionName = Configuration.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -34,13 +40,14 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = Versions.jvmTarget
     }
+
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        kotlinCompilerExtensionVersion = Versions.kotlinCompilerExtensionVersion
     }
     packaging {
         resources {
@@ -50,20 +57,49 @@ android {
 }
 
 dependencies {
+    implementation(platform(Libraries.kotlin_bom))
+    implementation(Libraries.androidx_core)
 
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
-    implementation("androidx.activity:activity-compose:1.8.0")
-    implementation(platform("androidx.compose:compose-bom:2023.03.00"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-    debugImplementation("androidx.compose.ui:ui-tooling")
-    debugImplementation("androidx.compose.ui:ui-test-manifest")
+    // Compose
+    implementation(Libraries.compose_ui)
+    implementation(Libraries.ui_tool_preview)
+    implementation(Libraries.compose_material)
+    implementation(Libraries.compose_material3)
+    implementation(Libraries.activity_compose)
+
+    // LifeCycle
+    implementation(Libraries.lifecycle_runtime)
+    implementation(Libraries.lifecycle_viewmodel)
+
+    // Coil
+    implementation(Libraries.coil_compose)
+
+    // Navigation
+    implementation(Libraries.navigation_fragment)
+    implementation(Libraries.navigation_ui)
+    implementation(Libraries.navigation_dynamic_feature)
+
+    // Hilt
+    implementation(Libraries.hilt_android)
+    implementation(Libraries.hilt_navigation_fragment)
+
+    // Timber
+    implementation(Libraries.timber)
+
+    // Retrofit
+    implementation(Libraries.retrofit2)
+    implementation(Libraries.okhttp3)
+    implementation(Libraries.retrofit2_adapter)
+
+    // Gson
+    implementation(Libraries.gson)
+
+    // Test
+    testImplementation(Libraries.junit)
+    androidTestImplementation(Libraries.test_ext_junit)
+    androidTestImplementation(Libraries.test_espresso)
+    androidTestImplementation(platform(Libraries.compose_bom))
+    androidTestImplementation(Libraries.ui_test_junit4)
+    debugImplementation(Libraries.compose_ui_tooling)
+    debugImplementation(Libraries.compose_ui_test_manifest)
 }
