@@ -21,6 +21,10 @@ object Versions {
     const val compose_material = "1.0.1"
     const val compose_material3 = "1.1.2"
     const val androidxNavigation = "2.5.0"
+    const val junit = "4.13.2"
+    const val test_ext_junit = "1.1.5"
+    const val test_espresso = "3.5.1"
+    const val compose_bom = "2023.03.00"
 }
 
 object Libraries {
@@ -71,10 +75,10 @@ object Libraries {
     const val gson = "com.google.code.gson:gson:${Versions.gson}"
 
     // Test
-    const val junit = "junit:junit:4.13.2"
-    const val test_ext_junit = "androidx.test.ext:junit:1.1.5"
-    const val test_espresso = "androidx.test.espresso:espresso-core:3.5.1"
-    const val compose_bom = "androidx.compose:compose-bom:2023.03.00"
+    const val junit = "junit:junit:${Versions.junit}"
+    const val test_ext_junit = "androidx.test.ext:junit:${Versions.test_ext_junit}"
+    const val test_espresso = "androidx.test.espresso:espresso-core:${Versions.test_espresso}"
+    const val compose_bom = "androidx.compose:compose-bom:${Versions.compose_bom}"
     const val ui_test_junit4 = "androidx.compose.ui:ui-test-junit4:${Versions.compose_ui}"
     const val compose_ui_tooling = "androidx.compose.ui:ui-tooling:${Versions.compose_ui}"
     const val compose_ui_test_manifest = "androidx.compose.ui:ui-test-manifest:${Versions.compose_ui}"
