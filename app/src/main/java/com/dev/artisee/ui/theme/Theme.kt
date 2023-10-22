@@ -15,6 +15,7 @@ import com.dev.artisee.ui.theme.color.*
 
 val LocalColors = staticCompositionLocalOf { ArtiseeLightColorScheme }
 
+// TODO artisee color setting
 val ArtiseeDarkColorScheme = darkColorScheme(
     primary = DarkDefaultColorScheme.primary,
     secondary = DarkDefaultColorScheme.secondary,
