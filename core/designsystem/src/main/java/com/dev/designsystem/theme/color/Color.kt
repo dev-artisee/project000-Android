@@ -1,4 +1,4 @@
-package com.dev.artisee.ui.theme.color
+package com.dev.designsystem.theme.color
 
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme

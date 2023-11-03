@@ -1,4 +1,4 @@
-package com.dev.artisee.ui.theme
+package com.dev.designsystem.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -11,7 +11,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.platform.LocalContext
-import com.dev.artisee.ui.theme.color.*
+import com.dev.designsystem.theme.color.DarkAndroidColorScheme
+import com.dev.designsystem.theme.color.DarkDefaultColorScheme
+import com.dev.designsystem.theme.color.LightAndroidColorScheme
+import com.dev.designsystem.theme.color.LightDefaultColorScheme
 
 val LocalColors = staticCompositionLocalOf { ArtiseeLightColorScheme }
 
