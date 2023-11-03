@@ -57,6 +57,7 @@ android {
 }
 
 dependencies {
+
     implementation(platform(Libraries.kotlin_bom))
     implementation(Libraries.androidx_core)
 
@@ -104,4 +105,7 @@ dependencies {
     androidTestImplementation(Libraries.ui_test_junit4)
     debugImplementation(Libraries.compose_ui_tooling)
     debugImplementation(Libraries.compose_ui_test_manifest)
+
+    implementation(project(mapOf("path" to ":core:designsystem")))
+
 }
