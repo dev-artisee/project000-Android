@@ -75,6 +75,7 @@ dependencies {
     implementation(Libraries.coil_compose)
 
     // Navigation
+    implementation(Libraries.navigation_compose)
     implementation(Libraries.navigation_fragment)
     implementation(Libraries.navigation_ui)
     implementation(Libraries.navigation_dynamic_feature)
@@ -93,6 +94,7 @@ dependencies {
 
     // Gson
     implementation(Libraries.gson)
+    implementation(Libraries.material3_window_size)
 
     // Test
     testImplementation(Libraries.junit)

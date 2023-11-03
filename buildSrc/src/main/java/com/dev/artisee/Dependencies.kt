@@ -26,6 +26,7 @@ object Versions {
     const val test_ext_junit = "1.1.5"
     const val test_espresso = "3.5.1"
     const val compose_bom = "2023.03.00"
+    const val window_size = "1.1.2"
 }
 
 object Libraries {
@@ -58,6 +59,7 @@ object Libraries {
     const val navigation_ui = "androidx.navigation:navigation-ui-ktx:${Versions.nav}"
     const val navigation_dynamic_feature = "androidx.navigation:navigation-dynamic-features-fragment:${Versions.nav}"
     const val navigation_safeargsPlugin = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.androidxNavigation}"
+    const val material3_window_size = "androidx.compose.material3:material3-window-size-class:${Versions.window_size}"
 
     // Hilt
     const val hilt_gradle = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"
