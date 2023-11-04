@@ -5,11 +5,11 @@ object Versions {
     const val agp = "8.1.1"
     const val ksp = "1.8.10-1.0.9"
     const val kotlin = "1.8.0"
-    const val jvmTarget = "1.8"
+    const val jvmTarget = "11"
     const val kotlinCompilerExtensionVersion = "1.4.3"
 
     const val activity_compose = "1.6.1"
-    const val compose_ui = "1.3.2"
+    const val compose_ui = "1.4.1"
     const val nav = "2.5.3"
     const val nav_compose = "2.4.2"
     const val coil = "2.2.0"
