@@ -1,6 +1,7 @@
 import com.dev.artisee.Libraries
 import com.dev.artisee.Versions
 import com.dev.artisee.Configuration
+import org.apache.tools.ant.util.JavaEnvUtils.VERSION_1_8
 
 plugins {
     id("com.android.application")
@@ -36,8 +37,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
         jvmTarget = Versions.jvmTarget
@@ -106,6 +107,9 @@ dependencies {
     debugImplementation(Libraries.compose_ui_tooling)
     debugImplementation(Libraries.compose_ui_test_manifest)
 
-    implementation(project(mapOf("path" to ":core:designsystem")))
-
+    implementation(project(":core:designsystem"))
+    implementation(project(":feature:home"))
+    implementation(project(":feature:my"))
+    implementation(project(":feature:bookmark"))
+    implementation(project(":feature:random"))
 }
