@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Artisee</string>
+    <string name="home">HOME</string>
+    <string name="my">MY</string>
+    <string name="bookmark">BOOKMARK</string>
+    <string name="random">RANDOM</string>
 </resources>

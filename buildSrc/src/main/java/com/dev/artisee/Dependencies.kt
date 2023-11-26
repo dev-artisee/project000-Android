@@ -5,12 +5,13 @@ object Versions {
     const val agp = "8.1.1"
     const val ksp = "1.8.10-1.0.9"
     const val kotlin = "1.8.0"
-    const val jvmTarget = "1.8"
+    const val jvmTarget = "11"
     const val kotlinCompilerExtensionVersion = "1.4.3"
 
     const val activity_compose = "1.6.1"
-    const val compose_ui = "1.3.2"
+    const val compose_ui = "1.4.1"
     const val nav = "2.5.3"
+    const val nav_compose = "2.4.2"
     const val coil = "2.2.0"
     const val hilt = "2.45"
     const val hilt_nav_fragment = "1.0.0"
@@ -25,6 +26,7 @@ object Versions {
     const val test_ext_junit = "1.1.5"
     const val test_espresso = "3.5.1"
     const val compose_bom = "2023.03.00"
+    const val window_size = "1.1.2"
 }
 
 object Libraries {
@@ -41,7 +43,6 @@ object Libraries {
     const val ui_tool_preview = "androidx.compose.ui:ui-tooling-preview:${Versions.compose_ui}"
     const val compose_material = "androidx.compose.material:material:${Versions.compose_material}"
     const val compose_material3 = "androidx.compose.material3:material3:${Versions.compose_material3}"
-
     const val activity_compose = "androidx.activity:activity-compose:${Versions.activity_compose}"
 
     // LifeCycle
@@ -52,10 +53,13 @@ object Libraries {
     const val coil_compose = "io.coil-kt:coil-compose:${Versions.coil}"
 
     // Navigation
+    const val navigation_runtime = "androidx.navigation:navigation-runtime-ktx:${Versions.nav}"
+    const val navigation_compose = "androidx.navigation:navigation-compose:${Versions.nav}"
     const val navigation_fragment = "androidx.navigation:navigation-fragment-ktx:${Versions.nav}"
     const val navigation_ui = "androidx.navigation:navigation-ui-ktx:${Versions.nav}"
     const val navigation_dynamic_feature = "androidx.navigation:navigation-dynamic-features-fragment:${Versions.nav}"
     const val navigation_safeargsPlugin = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.androidxNavigation}"
+    const val material3_window_size = "androidx.compose.material3:material3-window-size-class:${Versions.window_size}"
 
     // Hilt
     const val hilt_gradle = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"

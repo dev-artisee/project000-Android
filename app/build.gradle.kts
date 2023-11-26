@@ -1,6 +1,7 @@
 import com.dev.artisee.Libraries
 import com.dev.artisee.Versions
 import com.dev.artisee.Configuration
+import org.apache.tools.ant.util.JavaEnvUtils.VERSION_1_8
 
 plugins {
     id("com.android.application")
@@ -36,8 +37,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
         jvmTarget = Versions.jvmTarget
@@ -57,6 +58,7 @@ android {
 }
 
 dependencies {
+
     implementation(platform(Libraries.kotlin_bom))
     implementation(Libraries.androidx_core)
 
@@ -75,6 +77,7 @@ dependencies {
     implementation(Libraries.coil_compose)
 
     // Navigation
+    implementation(Libraries.navigation_compose)
     implementation(Libraries.navigation_fragment)
     implementation(Libraries.navigation_ui)
     implementation(Libraries.navigation_dynamic_feature)
@@ -93,6 +96,7 @@ dependencies {
 
     // Gson
     implementation(Libraries.gson)
+    implementation(Libraries.material3_window_size)
 
     // Test
     testImplementation(Libraries.junit)
@@ -102,4 +106,10 @@ dependencies {
     androidTestImplementation(Libraries.ui_test_junit4)
     debugImplementation(Libraries.compose_ui_tooling)
     debugImplementation(Libraries.compose_ui_test_manifest)
+
+    implementation(project(":core:designsystem"))
+    implementation(project(":feature:home"))
+    implementation(project(":feature:my"))
+    implementation(project(":feature:bookmark"))
+    implementation(project(":feature:random"))
 }
